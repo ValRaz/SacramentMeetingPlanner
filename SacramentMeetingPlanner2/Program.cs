@@ -18,11 +18,18 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapGet("/", async context =>
+{
+    context.Response.Redirect("/Meetings");
+});
+
 
 app.MapStaticAssets();
 app.MapRazorPages()
