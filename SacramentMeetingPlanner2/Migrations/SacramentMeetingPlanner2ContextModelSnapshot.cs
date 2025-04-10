@@ -34,9 +34,11 @@ namespace SacramentMeetingPlanner2.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ClosingPrayer")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConductingLeader")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IntermediateHymn")
@@ -49,6 +51,7 @@ namespace SacramentMeetingPlanner2.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("OpeningPrayer")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TalkSubjects")

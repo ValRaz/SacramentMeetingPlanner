@@ -17,10 +17,10 @@ namespace SacramentMeetingPlanner2.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ConductingLeader = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ConductingLeader = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MeetingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    OpeningPrayer = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClosingPrayer = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OpeningPrayer = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ClosingPrayer = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TalkSubjects = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     OpeningHymn = table.Column<int>(type: "int", nullable: false),
                     IntermediateHymn = table.Column<int>(type: "int", nullable: false),
